@@ -11,15 +11,26 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <h1 class="page-title text-center">ML Food App</h1>
-                <form class="col-md-4 offset-md-4" action = "/upload" method = "post" enctype="multipart/form-data" >
-                    <div class="form-group">
-                        <input type="file" id="upload" name="file"/>
+                <h1 class="col-md-12 page-title text-center">ML Food App</h1>
+                <div class="col-md-4 offset-md-4">
+                    <div class="card card-sm well-sm">
+                        <div class="card-body">
+                            <form class="form" action = "/upload" method = "post" enctype="multipart/form-data" >
+                                <div class="form-group">
+                                    <label for="upload-hdr">Choose HDR File</label>
+                                    <input type="file" id="upload-hdr" name="file_hdr" class="form-control"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upload-img">Choose IMG File</label>
+                                    <input type="file" id="upload-img" name="file_img" class="form-control"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-secondary" value="Upload & Predict">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-secondary" value="Upload Image">
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </body>
